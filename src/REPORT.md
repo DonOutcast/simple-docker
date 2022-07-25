@@ -26,3 +26,22 @@
 - Проверить любым способом, что контейнер запустился:
 ![docker check after restaart](images/cron13.png)
 ## Part 2. Операции с контейнером.
+- Прочитать конфигурационный файл nginx.conf внутри докер образа через команду exec
+- ![docker exec](images/cron15.png)
+- Создать на локальной машине файл nginx.conf. Настроить в нем по пути /status отдачу страницы ![docker ngin.conf](images/cron14.png)
+- Скопировать созданный файл nginx.conf внутрь докер образа через команду docker cp
+![docker cp](images/cron16.png)
+- Перезапустить nginx внутри докер образа через команду exec
+![docker -s reolad](images/cron17.png)
+- Проверить, что по адресу localhost:80/status отдается страничка со статусом сервера nginx
+![docker check status](images/cron18.png)
+- Экспортировать контейнер в файл container.tar через команду export
+![docker export](images/cron19.png)
+- Остановить контейнер
+![docker stop](images/cron20.png)
+- Удалить образ через docker rmi [image_id|repository], не удаляя перед этим контейнеры
+![docker rmi](images/cron21.png)
+- Импортировать контейнер обратно через команду import
+![docker import](images/cron22.png)
+- Запустить импортированный контейнер
+![docker run](images/cron23.png)
