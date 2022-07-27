@@ -52,7 +52,11 @@
 - Проверить, что в браузере по localhost:81 отдается написанная вами страничка
 ![localhost:81](images/cron24.png)
 ## Part 4.
-- Командой sudo docker  build -f Dockerfile -t hello_world:1.0 собираем докре файл
+- Командой sudo docker  build -f Dockerfile -t hello_world:1.0 . собираем докре файл
 - Запускаем контейнер командой sudo docker run --name my_container  -p 80:81 -v /home/outcast/simple_docker/src/part_4/nginx:etc/nginx -dt hello_world:1.0
 Получаем по 80 порту нашу страничку))
 ![my containrt](images/cron25.png)
+- Дописать в ./nginx/nginx.conf проксирование странички /status, по которой надо отдавать статус сервера nginx
+![status](images/cron26.png)
+
+## Part 5.
