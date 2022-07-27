@@ -45,3 +45,14 @@
 ![docker import](images/cron22.png)
 - Запустить импортированный контейнер
 ![docker run](images/cron23.png)
+## Part 3.
+- Установить sudo apt-get install -y libfcgi-dev, sudo, apt-get install -y spawn-fcgi
+- Скомпилировать main.c командой gcc main.c -lpthread -lfcgi -o server
+- Запустить бинарник командой spawn-fcgi -p 8080 -n ./server
+- Проверить, что в браузере по localhost:81 отдается написанная вами страничка
+![localhost:81](images/cron24.png)
+## Part 4.
+- Командой sudo docker  build -f Dockerfile -t hello_world:1.0 собираем докре файл
+- Запускаем контейнер командой sudo docker run --name my_container  -p 80:81 -v /home/outcast/simple_docker/src/part_4/nginx:etc/nginx -dt hello_world:1.0
+Получаем по 80 порту нашу страничку))
+![my containrt](images/cron25.png)
