@@ -1,0 +1,7 @@
+services:
+  container_1:
+    build: .
+  container_2:
+    build: proxy/.
+    ports:
+    - "80:8080"

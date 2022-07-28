@@ -60,3 +60,9 @@
 ![status](images/cron26.png)
 
 ## Part 5.
+Скачиваем dockel
+Запускаем наш образ dockel hello_world:1.0
+## Part 6.
+Запускаем командами docker-compose build
+docker-compose up
+![compose](images/cron27.png)
